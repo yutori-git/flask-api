@@ -17,6 +17,10 @@ class Memo(db.Model):
 with app.app_context():
     db.create_all()
 
+@app.route("/")
+def home():
+    return "Hello, Flask is running on Render!"
+
 #GET
 @app.route("/api/memos", methods=["GET"])
 def get_memos():
